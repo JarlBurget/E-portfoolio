@@ -1,0 +1,96 @@
+/* Chessboard Layout */
+#board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* Use fractional units to make columns flexible */
+  grid-template-rows: repeat(8, 1fr); /* Same for rows */
+  border: 4px solid black;
+  margin: 20px auto;
+  width: 100%;
+  height: auto; /* Let the height adjust automatically based on the width */
+  max-width: 480px; /* Limit max width for the chessboard */
+  aspect-ratio: 1; /* Maintain a square aspect ratio */
+}
+
+/* Each Square */
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* White and Black Squares */
+.white { background-color: #f0d9b5; }
+.black { background-color: #b58863; }
+
+/* Highlighted Square */
+.highlighted {
+  background-color: yellow !important; /* Highlight selected piece */
+}
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#play {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  background-color: #04ffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.3s;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Button Hover Effects */
+button:hover {
+  background-color: #13a8c2;
+  transform: scale(1.1) rotate(-2deg);
+  color: bisque;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+/* Mobile Styles (Screen width <= 768px) */
+@media (max-width: 768px) {
+  /* Chessboard */
+  #board {
+    max-width: 100%; /* Allow the board to expand to available width */
+  }
+
+  /* Each square */
+  .square {
+    font-size: 18px; /* Smaller text for smaller screens */
+  }
+
+  /* Smaller button padding */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logos/1.ico" type="image/x-icon">
+    <title>Jarl-Ivor Burget ┃ Play </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/moving.css">
+    <link rel="stylesheet" href="styles/chess.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <a href="index.html">
+            <img src="images/logo.ico" alt="Logo">
+          </a>
+          <div class="burger-menu" id="burger-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="navbar" id="navbar"> 
+            <ul>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#projects">Projects</a></li>
+              <li><a href="index.html#skills">Skills</a></li>
+              <li><a href="index.html#hobbies">Hobbies</a></li>
+              <li><a class="current" href="play.html">Play</a></li>
+            </ul> 
+          </div>
+        </nav>
+      </header>
+    <div class="wrapper">
+
+        <section id="play">
+            <h1>Let's play a game of chess!</h1>
+            <h3>On my spare time, I like to play chess. I have put together a little game in which I have included some of my best strategies.</h3>
+            <div id="board"></div>
+            <button class="button" onclick="resetBoard()">New Game</button>
+        </section>
+        
+    <footer>
+        <p>&copy; 2025 Jarl-Ivor Burget. All rights reserved.</p>
+    </footer>
+    </div>
+    <script src="chess.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>
